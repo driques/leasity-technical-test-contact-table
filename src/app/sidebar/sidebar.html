@@ -1,0 +1,56 @@
+<div
+  class="fixed inset-0 bg-black bg-opacity-40 flex justify-end z-50"
+  (click)="onClose()"
+>
+  <div
+    class="w-96 bg-white h-full p-6 shadow-lg transform transition-transform"
+    (click)="$event.stopPropagation()"
+  >
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-bold">Editar contacto</h2>
+      <button
+        (click)="onClose()"
+        class="text-gray-500 hover:text-gray-700 text-lg"
+      >
+        ✕
+      </button>
+    </div>
+
+    @if (contact) {
+      <app-input-field
+        label="Nombre"
+        [value]="contact.name"
+        (valueChange)="onValueChange('name', $event)"
+      ></app-input-field>
+
+      <app-input-field
+        label="Email"
+        type="email"
+        [value]="contact.email"
+        (valueChange)="onValueChange('email', $event)"
+      ></app-input-field>
+
+      <app-input-field
+        label="RUT"
+        [value]="contact.rut"
+        (valueChange)="onValueChange('rut', $event)"
+      ></app-input-field>
+
+      <div class="mt-6 flex justify-end gap-2">
+        <button
+          (click)="onClose()"
+          class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300"
+        >
+          Cancelar
+        </button>
+
+        <button
+          (click)="onSave()"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Guardar
+        </button>
+      </div>
+    }
+  </div>
+</div>

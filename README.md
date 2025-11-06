@@ -1,61 +1,46 @@
+# Leasify Technical Test - Contact Table
 
-# ContactTable
+Este proyecto corresponde a la prueba técnica realizada para Leasity, donde se implementa una tabla de contactos con edición y manejo de datos.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
+El objetivo principal fue demostrar buenas prácticas en Angular 20, arquitectura limpia, componentes reutilizables, y una UI moderna con TailwindCSS.
 
-## Development server
+---
 
-To start a local development server, run:
+## Tecnologías y Herramientas
 
-```bash
-ng serve
-```
+- **Angular 20**: Framework principal para la aplicación.
+- **TailwindCSS**: Estilización moderna y responsive.
+- **TypeScript**: Tipado fuerte y buenas prácticas.
+- **Vite**: Bundler para desarrollo rápido.
+- **Google Fonts**: Fuente `HKGroteskPro` aplicada globalmente.
+- **Lucide Icons**: Uso de iconografía moderna para acciones (editar, ver detalle).
+- **Favicon y branding de Leasity**: Aplicado en la app.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## Arquitectura y Patrones
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Arquitectura limpia**: Separación de responsabilidades entre componentes, servicios y modelos.
+- **Componente padre/hijo**: `ContactsComponent` gestiona la tabla y el sidebar.
+- **Sidebar editable**: `SidebarComponent` permite editar información del contacto y comunicar cambios al componente padre mediante `@Output`.
+- **Composición y reusabilidad**:
+  - `InputFieldComponent`: Componente reutilizable para campos de formulario con binding bidireccional.
+  - `SidebarComponent`: Componente independiente y reutilizable.
+- **Servicios**: `ContactsService` simula fetching de datos desde un endpoint (API mock).
+- **Observable y manejo de errores**: Uso de `RxJS` y `catchError` para manejo de respuestas de la API.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Funcionalidades
 
-```bash
-ng generate --help
-```
+- **Listado de contactos**: Visualización de datos con tabla y tags.
+- **Edición de contacto**:
+  - Sidebar con inputs dinámicos.
+  - Comunicación de cambios al componente padre.
+- **Creación de nuevo contacto**: Posibilidad de agregar un contacto desde el sidebar.
+- **Estilos modernos**: TailwindCSS aplicado en tablas, botones, inputs y sidebar.
+- **Iconografía**: Iconos de acción (lapiz para editar) usando Lucide Angular.
+- **Responsive**: Sidebar y tabla adaptables a diferentes resoluciones.
+- **Tipografía personalizada**: Fuente corporativa `HKGroteskPro`.
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
->>>>>>> Stashed changes
+---
