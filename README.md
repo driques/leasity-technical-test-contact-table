@@ -1,5 +1,7 @@
-# <img width="231" height="223" alt="full-gradient-large" src="https://github.com/user-attachments/assets/7a47ee23-94fa-4d08-9dff-5ecf8a140b1c" />
-Leasify Technical Test - Contact Table
+<img width="231" height="223" alt="full-gradient-large" src="https://github.com/user-attachments/assets/7a47ee23-94fa-4d08-9dff-5ecf8a140b1c" />
+
+# Leasify Technical Test - Contact Table
+
 
 Este proyecto corresponde a la prueba técnica realizada para Leasity, donde se implementa una tabla de contactos con edición y manejo de datos.
 
